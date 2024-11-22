@@ -1,0 +1,47 @@
+{
+    "model": "DBL_Light",
+    "encoder_widths": [
+        64,
+        64,
+        64,
+        128
+    ],
+    "decoder_widths": [
+        32,
+        32,
+        64,
+        128
+    ],
+    "out_conv": [
+        32,
+        3
+    ],
+    "str_conv_k": 4,
+    "str_conv_s": 2,
+    "str_conv_p": 1,
+    "agg_mode": "att_group",
+    "encoder_norm": "group",
+    "n_head": 16,
+    "d_model": 256,
+    "d_k": 4,
+    "dataset_folder": "",
+    "res_dir": "results/Light",
+    "num_workers": 8,
+    "rdm_seed": 1,
+    "device": "cuda",
+    "display_step": 50,
+    "cache": false,
+    "epochs": 100,
+    "batch_size": 4,
+    "lr": 0.001,
+    "mono_date": null,
+    "ref_date": "2018-09-01",
+    "fold": null,
+    "num_classes": 3,
+    "ignore_index": null,
+    "pad_value": 0,
+    "padding_mode": "reflect",
+    "val_every": 1,
+    "val_after": 0,
+    "N_params": 1110033
+}
