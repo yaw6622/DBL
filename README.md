@@ -7,6 +7,15 @@ We select two representative locations with small and scattered parcels and cons
 to accomplish accurate crop-type mapping. The main branch is designed for capturing global receptive field and the supplementary is designed for temporal and spatial feature refinement. The experiments are conducted to evaluate the performance of the DBL compared with the state-of-the-art (SOTA) models. The results indicate that the DBL model performs exceptionally well on both datasets. Especially on the CF dataset characterized by scattered and irregular plots, the DBL model achieves an overall accuracy (OA) of 97.70% and a mean intersection over union (mIoU) of 90.70%. It outperforms all the SOTA models and becomes the only model to exceed 90% mark on the mIoU score. We also demonstrate the stability and robustness of the DBL across different agricultural regions.
 ## General Framework 
 
+## Pretrained model
+To facilitate quick usage, we provide a lightweight pretrained model for the **CF dataset** in the `pretrained_model` folder.
+
+When using the lightweight pretrained model, please make the following adjustments to the configuration:
+
+-   Set `self.width` to 64.
+-   Change `Out_dim` from `[64, 128]` to `[[64, 64]]`.
+-   Set the **LSTM hidden size** to 32.
+
 
 ## Datasets
 ### JM & CF
