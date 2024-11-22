@@ -17,6 +17,10 @@ git clone https://github.com/yaw6622/DBL
 cd DBL/
 pip install -r requirements.txt
 
+## Train the model
+```bash
+cd DBL
+python train.py  # Train and test DBL on the JM or CF dataset.
 
 ## Datasets
 ### JM & CF
