@@ -7,6 +7,23 @@ We select two representative locations with small and scattered parcels and cons
 to accomplish accurate crop-type mapping. The main branch is designed for capturing global receptive field and the supplementary is designed for temporal and spatial feature refinement. The experiments are conducted to evaluate the performance of the DBL compared with the state-of-the-art (SOTA) models. The results indicate that the DBL model performs exceptionally well on both datasets. Especially on the CF dataset characterized by scattered and irregular plots, the DBL model achieves an overall accuracy (OA) of 97.70% and a mean intersection over union (mIoU) of 90.70%. It outperforms all the SOTA models and becomes the only model to exceed 90% mark on the mIoU score. We also demonstrate the stability and robustness of the DBL across different agricultural regions.
 ## General Framework 
 
+
+
+## Datasets
+### JM & CF
+The primary experiments in this project are conducted on our newly proposed datasets, **JM** and **CF**.
+You can download the datasets from the following link: [JM](https://drive.google.com/file/d/1HEKonoFzjdrNUOG8AQbDiLpyTBEh1N_D/view?usp=drive_link), [CF](https://drive.google.com/file/d/1Tq6ZXakemSCTkaY0nKyRn8k9114Fpj_H/view?usp=drive_link).
+
+### PASTIS & PASTIS-SS
+In order to validate the generalization capabilities of the proposed
+DBL, we conduct additional experiments on a public available dataset
+PASTIS and a sub-dataset PASTIS-SS.
+The complete PASTIS dataset can be downloaded form here: https://github.com/VSainteuf/pastis-benchmark
+For the filtered sub-dataset PASTIS-SS, we provide the numbers of filtered time-series data can be found in PASTIS-SS.xls
+
+## Obtain the outputs  
+- After trianing, you could obtain the results in './results/'
+
 ## Pretrained model
 To facilitate quick usage, we provide a lightweight pretrained model for the **CF dataset** in the `pretrained_model` folder.
 
@@ -16,8 +33,6 @@ When using the lightweight pretrained model, please make the following adjustmen
 -   Change `Out_dim` from `[64, 128]` to `[[64, 64]]`.
 -   Set the **LSTM hidden size** to 32.
 
-
-## Datasets
-### JM & CF
-The primary experiments in this project are conducted on our newly proposed datasets, **JM** and **CF**.
-You can download the datasets from the following link: [JM](https://drive.google.com/file/d/1HEKonoFzjdrNUOG8AQbDiLpyTBEh1N_D/view?usp=drive_link), [CF](https://drive.google.com/file/d/1Tq6ZXakemSCTkaY0nKyRn8k9114Fpj_H/view?usp=drive_link).
+## Acknowledgments  
+  
+- We thank the authors of [Utae](https://github.com/VSainteuf/utae-paps),  [CBAM](https://github.com/elbuco1/CBAM) and [Fasternet](https://github.com/JierunChen/FasterNet) for their open-source codes.
